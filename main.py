@@ -1,12 +1,12 @@
 import pandas as pd
 import re
-from google.colab import files
+# from google.colab import files
 
 def run_process():
   df = pd.read_excel('Conteúdos_RAW.xlsx')
   cnu = get_subjects_df(df)
   cnu.to_excel('Conteúdos.xlsx', index = False)
-  files.download('Conteúdos.xlsx')
+  # files.download('Conteúdos.xlsx')
 
 def get_subjects_df(df: pd.DataFrame) -> pd.DataFrame:
   axis_dfs = []
